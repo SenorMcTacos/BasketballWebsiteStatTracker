@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <!-- Need to add module for import modules-->
+         <!--This error appears in inspect -> Uncaught SyntaxError: export declarations may only appear at top level of a module -->
+        <script type="module" src="app.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <button id="HomePageB" class="HeaderB">Home Page</button>
+            <button id="GamePageB" class="HeaderB">Game Page</button>
+            <button id="HistoryPageB" class="HeaderB">History Page</button>
+            <button id="SavePageB" class="HeaderB">Save Page</button>
+        </header>
+        <div id="HomePage" class="Pages">
+            <div>
+                <h1>Players:</h1>
+                <h4>Player 1</h4>
+            </div>
+        </div>
+
+        <div id="GamePage" class="Pages hidden">
+            <p>Game Page</p>
+        </div>
+
+        <div id="HistoryPage" class="Pages hidden">
+            <p>History Page</p>
+
+        </div>
+
+        <div id="SavePage" class="Pages hidden">
+            <p>Save Page</p>
+        </div>
+
+
+
+        
+    </body>
+    
+</html>
