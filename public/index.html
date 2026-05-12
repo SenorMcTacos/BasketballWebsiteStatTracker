@@ -10,7 +10,7 @@
         <header>
             <button id="HomePageB" class="HeaderB">Home Page</button>
             <button id="GamePageB" class="HeaderB">Game Page</button>
-            <button id="BoxScoreB" class="HeaderB">Box Score Page</button>
+            <button id="BoxScorePageB" class="HeaderB">Box Score Page</button>
             <button id="HistoryPageB" class="HeaderB">History Page</button>
             <hr>
         </header>
@@ -31,46 +31,74 @@
             <p>Game Page</p>
 
             <!-- Score / Teams-->
-            <div id="GameHeaderDiv">
-                <div id="HomeTeamScoreDiv">
-                    <h1>Home Team</h1>
-                    <h1 id="HomeTeamScore">85</h1>
-                </div>
-                <div id="GameStatsDiv">
-                    <div id="FieldGoalStat">
-                        <h4 id="FieldGoalPercentage">50 FG%</h4>
-                        <h4 id="FieldGoals">10/20</h4>
+            <div id="GameHeaderDiv" class="divEvenHalfSplit">
+                <div id="HomeTeamDiv" class="TeamStatDiv">
+                    <div id="Home" class="TeamScoreDiv">
+                        <h1>Home Team</h1>
+                        <h1 id="HomeTeamScore">85</h1>
                     </div>
-                    <div id="3PTFieldGoalStat">
-                        <h4 id="3PTFieldGoalPercentage">50 FG%</h4>
-                        <h4 id="3PTFieldGoals">10/20</h4>
+                    <div id="HomeGameStatsDiv" class="HorizontalStatsDiv">
+                        <div class="FieldGoalStatDiv">
+                            <h3 id="Home" class="FieldGoalPercentage">50 FG%</h3>
+                            <h3 id="Home" class="FieldAttempts">10/20</h3>
+                        </div>
+                        <div class="3PTFieldGoalStatDiv">
+                            <h3 id="Home3PTFieldGoalPercentage" class="3PTFieldGoalPercentage">50 FG%</h3>
+                            <h3 id="Home3PTFieldGoals" class="3PTFieldAttempts">10/20</h3>
+                        </div>
+                        <div class="FreeThrowStatDiv">
+                            <h3 id="HomeFreeThrowPercentage" class="FreeThrowPercentage">50 FG%</h3>
+                            <h3 id="HomeFreeThrowGoals" class="FreeThrowAttempts">10/20</h3>
+                        </div>
+                        <h3>50 FTS</h3>
+                        <h3>50 REB</h3>
+                        <h3>50 AST</h3>
+                        <h3>50 BLK</h3>
+                        <h3>50 STL</h3>
                     </div>
-                    <div id="FreeThrowStat">
-                        <h4 id="FreeThrowPercentage">50 FG%</h4>
-                        <h4 id="FreeThrowGoals">10/20</h4>
-                    </div>
-                    <h4>50 3FG%</h4>
-                    <h4>50 FTS</h4>
-                    <h4>50 REB</h4>
-                    <h4>50 AST</h4>
-                    <h4>50 BLK</h4>
-                    <h4>50 STL</h4>
                 </div>
 
-                
+                <div id="AwayTeamDiv" class="TeamStatDiv">
+                    <div id="Away" class="TeamScoreDiv">
+                        <h1>Away Team</h1>
+                        <h1 id="AwayTeamScore">20</h1>
+                    </div>
+                    <div id="AwayGameStatsDiv" class="HorizontalStatsDiv">
+                        <div class="FieldGoalStatDiv">
+                            <h3 id="Away" class="FieldGoalPercentage">50 FG%</h3>
+                            <h3 id="Away" class="FieldAttempts">10/20</h3>
+                        </div>
+                        <div class="3PTFieldGoalStatDiv">
+                            <h3 id="Away" class="3PTFieldGoalPercentage">50 FG%</h3>
+                            <h3 id="Away" class="3PTFieldAttempts">10/20</h3>
+                        </div>
+                        <div class="FreeThrowStatDiv">
+                            <h3 id="Away" class="FreeThrowPercentage">50 FG%</h3>
+                            <h3 id="AWay" class="FreeThrowAttempts">10/20</h3>
+                        </div>
+                        <h3>50 FTS</h3>
+                        <h3>50 REB</h3>
+                        <h3>50 AST</h3>
+                        <h3>50 BLK</h3>
+                        <h3>50 STL</h3>
+                    </div>
+                </div>
             </div>
+            <hr>
             <!-- Players / Team-->
             <div>
-
+                <h1>Active</h1>
             </div>
+            <hr>
             <!-- Players / Team Bench -->
             <div>
-            
+                <h1>Bench</h1>
             </div>
         </div>
 
         <div id="BoxScorePage" class="Pages hidden">
-            <p>Save Page</p>
+            <p>Box Score</p>
+            <p>Game Log</p>
         </div>
 
         <div id="HistoryPage" class="Pages hidden">
@@ -78,11 +106,50 @@
 
         </div>
 
-        
+        <div id="PlayerCardTemplate" class="divEvenHalfSplit">
+            <div id="PlayerCardStatsDiv">
+                <h1>Player Card Stats Here</h1>
+                <div class="PlayerInfoDiv">
+                    Jeremy Pham 18
+                </div>
+                <div class="PlayerStatsDiv HorizontalStatsDiv">    
+                    <div class="FieldGoalStatDiv">
+                        <h3 id="Player" class="FieldGoalPercentage">50 FG%</h3>
+                        <h3 id="Player" class="FieldAttempts">10/20</h3>
+                    </div>
+                    <div class="3PTFieldGoalStatDiv">
+                        <h3 id="Player" class="3PTFieldGoalPercentage">50 FG%</h3>
+                        <h3 id="Player" class="3PTFieldAttempts">10/20</h3>
+                    </div>
+                    <div class="FreeThrowStatDiv">
+                        <h3 id="Player" class="FreeThrowPercentage">50 FG%</h3>
+                        <h3 id="Player" class="FreeThrowAttempts">10/20</h3>
+                    </div>
+                    <h3>50 FTS</h3>
+                    <h3>50 REB</h3>
+                    <h3>50 AST</h3>
+                    <h3>50 BLK</h3>
+                    <h3>50 STL</h3>
+                </div>
+            </div>
+            <div id="PlayerCardButtonsDiv">
+                <h1>Player Card Buttons Here</h1>
+                <button><- UNDO</button>
+                <button>+2FG</button>
+                <button>-2FG</button>
+                <button>+3FG</button>
+                <button>-3FG</button>
+                <button>+FT</button>
+                <button>-FT</button>
+                <button>+AST</button>
+                <button>+RBD</button>
+                <button>+STL</button>
+                <button>+BLK</button>
+                <button>REDO -></button>
 
-
-
-        
+                <button>SUB</button>
+            </div>
+        </div>
     </body>
     
 </html>

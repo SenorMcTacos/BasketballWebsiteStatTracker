@@ -3,20 +3,39 @@
     display: none;
 }
 
-#GameHeaderDiv
+/* Game Page */
+.divEvenHalfSplit
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.HorizontalStatsDiv
+{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+/* class * affects children */
+.HorizontalStatsDiv * 
+{
+    margin-right: 1em;
+}
+/*
+.TeamStatDiv
 {
     background-color: red;
     display: flex;
     flex-direction: column;
     align-items: left;
 }
-#HomeTeamScoreDiv
+*/
+.TeamScoreDiv
 {
     display: flex;
     flex-direction: row;
 }
-#GameStatsDiv
+h3
 {
-    display: flex;
-    flex-direction: row;
+    margin: 0;
 }

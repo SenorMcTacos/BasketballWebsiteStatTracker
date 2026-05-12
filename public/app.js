@@ -21,6 +21,7 @@ function initApp() {
                 }
                 else {
                     page.classList.remove("hidden");
+                    console.log("Revealing " + page.id);
                 }
             });
         });

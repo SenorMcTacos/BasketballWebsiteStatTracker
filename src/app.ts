@@ -18,13 +18,13 @@ function initApp() {
     HeaderB.forEach((headers) => {
         // Make buttons "hide" to switch tabs
         headers.addEventListener("click", (event: any) => {
-            
             Pages.forEach((page) => {
                 if (page.id != headers.id.slice(0, -1)) {
                     page.classList.add("hidden")
                 }
                 else {
                     page.classList.remove("hidden")
+                    console.log("Revealing " + page.id)
                 }
             })
         })
