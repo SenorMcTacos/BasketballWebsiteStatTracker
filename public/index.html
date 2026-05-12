@@ -10,18 +10,67 @@
         <header>
             <button id="HomePageB" class="HeaderB">Home Page</button>
             <button id="GamePageB" class="HeaderB">Game Page</button>
+            <button id="BoxScoreB" class="HeaderB">Box Score Page</button>
             <button id="HistoryPageB" class="HeaderB">History Page</button>
-            <button id="SavePageB" class="HeaderB">Save Page</button>
+            <hr>
         </header>
         <div id="HomePage" class="Pages">
             <div>
-                <h1>Players:</h1>
-                <h4>Player 1</h4>
+                <button>New Game</button>
+                <button>Continue Game</button>
+            </div>
+            
+            <div>
+                <h1>Current Game</h1>
+                
+                <h1>Players</h1>
             </div>
         </div>
 
         <div id="GamePage" class="Pages hidden">
             <p>Game Page</p>
+
+            <!-- Score / Teams-->
+            <div id="GameHeaderDiv">
+                <div id="HomeTeamScoreDiv">
+                    <h1>Home Team</h1>
+                    <h1 id="HomeTeamScore">85</h1>
+                </div>
+                <div id="GameStatsDiv">
+                    <div id="FieldGoalStat">
+                        <h4 id="FieldGoalPercentage">50 FG%</h4>
+                        <h4 id="FieldGoals">10/20</h4>
+                    </div>
+                    <div id="3PTFieldGoalStat">
+                        <h4 id="3PTFieldGoalPercentage">50 FG%</h4>
+                        <h4 id="3PTFieldGoals">10/20</h4>
+                    </div>
+                    <div id="FreeThrowStat">
+                        <h4 id="FreeThrowPercentage">50 FG%</h4>
+                        <h4 id="FreeThrowGoals">10/20</h4>
+                    </div>
+                    <h4>50 3FG%</h4>
+                    <h4>50 FTS</h4>
+                    <h4>50 REB</h4>
+                    <h4>50 AST</h4>
+                    <h4>50 BLK</h4>
+                    <h4>50 STL</h4>
+                </div>
+
+                
+            </div>
+            <!-- Players / Team-->
+            <div>
+
+            </div>
+            <!-- Players / Team Bench -->
+            <div>
+            
+            </div>
+        </div>
+
+        <div id="BoxScorePage" class="Pages hidden">
+            <p>Save Page</p>
         </div>
 
         <div id="HistoryPage" class="Pages hidden">
@@ -29,9 +78,7 @@
 
         </div>
 
-        <div id="SavePage" class="Pages hidden">
-            <p>Save Page</p>
-        </div>
+        
 
 
 

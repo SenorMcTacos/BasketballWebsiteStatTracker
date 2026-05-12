@@ -2,3 +2,21 @@
 {
     display: none;
 }
+
+#GameHeaderDiv
+{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+#HomeTeamScoreDiv
+{
+    display: flex;
+    flex-direction: row;
+}
+#GameStatsDiv
+{
+    display: flex;
+    flex-direction: row;
+}
