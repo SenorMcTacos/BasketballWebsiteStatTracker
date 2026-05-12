@@ -1,10 +1,19 @@
+/* General CSS */
 .hidden 
 {
     display: none;
 }
+h3
+{
+    margin: 0;
+}
+body
+{
+    margin: 0;
+}
 
 /* Game Page */
-.divEvenHalfSplit
+.DivEvenHalfSplit
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,7 +23,9 @@
     background-color: red;
     display: flex;
     flex-direction: row;
-    align-items: left;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 /* class * affects children */
 .HorizontalStatsDiv * 
@@ -35,7 +46,9 @@
     display: flex;
     flex-direction: row;
 }
-h3
+.PlayerCardDiv
 {
-    margin: 0;
+    border: 10px solid black;
+    border-radius: 10px;
 }
+
