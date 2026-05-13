@@ -8,12 +8,16 @@ const HeaderB = $$(".HeaderB")
 const Pages = $$(".Pages")
 const HomePageB = $("#HomePageB")
 
+// Player Card Template
+const PlayerCardTemplate = $("#PlayerCardTemplate") as HTMLDivElement
+
 // Initialize Website
 function initApp() {
     console.log(HeaderB)
     var balls = document.createElement("p")
     balls.innerText = HeaderB[1].innerText
     balls.classList.add
+
     // Add header button functionality
     HeaderB.forEach((headers) => {
         // Make buttons "hide" to switch tabs
@@ -34,5 +38,12 @@ function initApp() {
     
 }
 
+// Create Player Cards
+function createPlayerCards() {
+    // Clone PlayerCardTemplate
+    var dupeCard = PlayerCardTemplate.cloneNode()
+
+    
+}
 // Start app
 initApp()

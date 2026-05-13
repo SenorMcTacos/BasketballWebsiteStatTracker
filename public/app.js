@@ -5,6 +5,8 @@ var $$ = function (classname) { return document.querySelectorAll(classname); };
 const HeaderB = $$(".HeaderB");
 const Pages = $$(".Pages");
 const HomePageB = $("#HomePageB");
+// Player Card Template
+const PlayerCardTemplate = $("#PlayerCardTemplate");
 // Initialize Website
 function initApp() {
     console.log(HeaderB);
@@ -26,6 +28,11 @@ function initApp() {
             });
         });
     });
+}
+// Create Player Cards
+function createPlayerCards() {
+    // Clone PlayerCardTemplate
+    var dupeCard = PlayerCardTemplate.cloneNode();
 }
 // Start app
 initApp();

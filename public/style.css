@@ -3,6 +3,10 @@
 {
     display: none;
 }
+h1
+{
+    margin: 0;
+}
 h3
 {
     margin: 0;
@@ -32,19 +36,13 @@ body
 {
     margin-right: 1em;
 }
-/*
-.TeamStatDiv
-{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-*/
+
 .TeamScoreDiv
 {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .PlayerCardDiv
 {
