@@ -5,8 +5,16 @@ var $$ = function (classname) { return document.querySelectorAll(classname); };
 const HeaderB = $$(".HeaderB");
 const Pages = $$(".Pages");
 const HomePageB = $("#HomePageB");
+// Pages
+const HomePage = $("#HomePage");
+const GamePage = $("#GamePage");
+const BoxScorePage = $("#BoxScorePage");
+const HistoryPage = $("#HistoryPage");
 // Player Card Template
 const PlayerCardTemplate = $("#PlayerCardTemplate");
+// Home Page Buttons
+const NewGameB = $("#NewGameB");
+const ContinueGameB = $("#ContinueGameB");
 // Initialize Website
 function initApp() {
     console.log(HeaderB);
@@ -28,11 +36,29 @@ function initApp() {
             });
         });
     });
+    // Test
+    NewGameB.addEventListener("click", (event) => {
+        createPlayerCards("David");
+    });
+    ContinueGameB.addEventListener("click", (event) => {
+        console.log($$(".Player"));
+    });
 }
 // Create Player Cards
-function createPlayerCards() {
+function createPlayerCards(playerName) {
     // Clone PlayerCardTemplate
-    var dupeCard = PlayerCardTemplate.cloneNode();
+    let dupeCard = PlayerCardTemplate.cloneNode(true);
+    dupeCard.removeAttribute('id');
+    HomePage.appendChild(dupeCard);
+    let dupeCardElements = $$(".Player");
+    // Set class of new card to differentiate from template
+    for (let i = 0; i < dupeCardElements.length / 2; ++i) {
+        let element = dupeCardElements[i];
+        element.classList.remove("Player");
+        element.classList.add(playerName);
+    }
+    HomePage.removeChild(dupeCard);
+    GamePage.appendChild(dupeCard);
 }
 // Start app
 initApp();
