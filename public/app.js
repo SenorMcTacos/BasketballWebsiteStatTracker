@@ -15,6 +15,11 @@ const PlayerCardTemplate = $("#PlayerCardTemplate");
 // Home Page Buttons
 const NewGameB = $("#NewGameB");
 const ContinueGameB = $("#ContinueGameB");
+// Game Page
+const GamePageHomeStatsName = "Home";
+// Stat Class Names
+const TotalPointsClass = "TotalPoints";
+const FieldGoalPercentage = "FieldGoalPercentage";
 // Initialize Website
 function initApp() {
     console.log(HeaderB);
@@ -57,10 +62,55 @@ function createPlayerCards(playerName) {
         element.classList.remove("Player");
         element.classList.add(playerName);
     }
+    // Add Buttons
+    let playerClass = new PlayerCard(playerName);
+    let totalPointsHTMLStr = "";
+    $(".");
     HomePage.removeChild(dupeCard);
     GamePage.appendChild(dupeCard);
 }
 // Start app
 initApp();
+// Stat Class
+class PlayerCard {
+    name;
+    totalPoints = 0;
+    fieldMakes = 0;
+    fieldMiss = 0;
+    threeFieldMakes = 0;
+    threeFieldMiss = 0;
+    ftMakes = 0;
+    ftMiss = 0;
+    rebounds = 0;
+    assists = 0;
+    blocks = 0;
+    steals = 0;
+    constructor(playerName) {
+        this.name = playerName;
+    }
+    getHTMLTotalPoints() {
+        return this.totalPoints;
+    }
+    getHTMLFieldGoalPercentage() {
+    }
+    getHTMLFieldGoalAttempts() {
+    }
+    getHTML3PTFieldGoalAttempts() {
+    }
+    getHTML3PTFieldGoalPercentage() {
+    }
+    getHTMLFreeThrowAttempts() {
+    }
+    getHTMLFreeThrowPercentage() {
+    }
+    getHTMLTotalRebounds() {
+    }
+    getHTMLTotalAssists() {
+    }
+    getHTMLTotalBlocks() {
+    }
+    getHTMLTotalSteals() {
+    }
+}
 export {};
 //# sourceMappingURL=app.js.map

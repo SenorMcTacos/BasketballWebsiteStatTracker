@@ -21,6 +21,13 @@ const PlayerCardTemplate = $("#PlayerCardTemplate") as HTMLDivElement
 const NewGameB = $("#NewGameB")
 const ContinueGameB = $("#ContinueGameB")
 
+// Game Page
+const GamePageHomeStatsName = "Home"
+
+// Stat Class Names
+const TotalPointsClass = "TotalPoints"
+const FieldGoalPercentage = "FieldGoalPercentage"
+
 // Initialize Website
 function initApp() {
     console.log(HeaderB)
@@ -69,9 +76,82 @@ function createPlayerCards(playerName : string) {
         element.classList.add(playerName)
     }
 
+    // Add Buttons
+    let playerClass = new PlayerCard(playerName)
+    
+    let totalPointsHTMLStr = ""
+    $(".")
+
+
     HomePage.removeChild(dupeCard)
     GamePage.appendChild(dupeCard)
         
 }
 // Start app
 initApp()
+
+// Stat Class
+class PlayerCard {
+    name: string;
+    totalPoints: number = 0;
+    fieldMakes: number = 0;
+    fieldMiss: number = 0;
+    threeFieldMakes: number = 0;
+    threeFieldMiss: number = 0;
+    ftMakes: number = 0;
+    ftMiss: number = 0;
+    rebounds: number = 0;
+    assists: number = 0;
+    blocks: number = 0;
+    steals: number = 0;
+
+    
+    constructor(playerName: string) {
+        this.name = playerName
+    }
+
+    getHTMLTotalPoints() {
+        return this.totalPoints
+    }
+
+    getHTMLFieldGoalPercentage() {
+
+    }
+
+    getHTMLFieldGoalAttempts() {
+
+    }
+
+    getHTML3PTFieldGoalAttempts() {
+
+    }
+
+    getHTML3PTFieldGoalPercentage() {
+
+    }
+
+    getHTMLFreeThrowAttempts() {
+
+    }
+
+    getHTMLFreeThrowPercentage() {
+
+    }
+
+    getHTMLTotalRebounds() {
+
+    }
+
+    getHTMLTotalAssists() {
+
+    }
+
+    getHTMLTotalBlocks() {
+
+    }
+
+    getHTMLTotalSteals() {
+
+    }
+    
+}
