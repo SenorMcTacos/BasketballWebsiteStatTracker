@@ -49,6 +49,9 @@ function initApp() {
         console.log($$(".Player"));
     });
 }
+function twoClassHTMLString(classOne, classTwo) {
+    return "." + classOne + "." + classTwo;
+}
 // Create Player Cards
 function createPlayerCards(playerName) {
     // Clone PlayerCardTemplate
@@ -64,8 +67,42 @@ function createPlayerCards(playerName) {
     }
     // Add Buttons
     let playerClass = new PlayerCard(playerName);
-    let totalPointsHTMLStr = "";
-    $(".");
+    // Stats to Change per Player
+    let totalPointsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalPoints"));
+    let fieldGoalPercentageHTMLStr = $(twoClassHTMLString(playerClass.name, "FieldGoalPercentage"));
+    let fieldGoalAttemptsHTMLStr = $(twoClassHTMLString(playerClass.name, "FieldAttempts"));
+    let threePTFieldGoalPercentageHTMLStr = $(twoClassHTMLString(playerClass.name, "ThreePTFieldGoalPercentage"));
+    let threePTFieldGoalAtttemptsHTMLStr = $(twoClassHTMLString(playerClass.name, "ThreePTFieldGoalAttempts"));
+    let freeThrowPercentageHTMLStr = $(twoClassHTMLString(playerClass.name, "FreeThrowPercentage"));
+    let freeThrowAttemptsHTMLStr = $(twoClassHTMLString(playerClass.name, "FreeThrowAttempts"));
+    let totalReboundsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalRebounds"));
+    let totalAssistsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalAssists"));
+    let totalBlocksHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalBlocks"));
+    let totalStealsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalSteals"));
+    // Buttons to add event listeners
+    let undoButton = $(twoClassHTMLString(playerClass.name, "UNDOButton"));
+    let addTwoFGButton = $(twoClassHTMLString(playerClass.name, "PlusTwoFGButton"));
+    let minusTwoFGButton = $(twoClassHTMLString(playerClass.name, "MinusTwoFGButton"));
+    let addThreeFGButton = $(twoClassHTMLString(playerClass.name, "PlusThreeFGButton"));
+    let minusThreeFGButton = $(twoClassHTMLString(playerClass.name, "MinusThreeFGButton"));
+    let addFTButton = $(twoClassHTMLString(playerClass.name, "PlusFTButton"));
+    let minusFTButton = $(twoClassHTMLString(playerClass.name, "MinusFTButton"));
+    let assistButton = $(twoClassHTMLString(playerClass.name, "ASTButton"));
+    let reboundButton = $(twoClassHTMLString(playerClass.name, "RBDButton"));
+    let stealButton = $(twoClassHTMLString(playerClass.name, "STLButton"));
+    let blockButton = $(twoClassHTMLString(playerClass.name, "BLKButton"));
+    let redoButton = $(twoClassHTMLString(playerClass.name, "REDOButton"));
+    // IGNORE SUB BUTTON FOR NOW!
+    // let subButton
+    // Add Event Listeners
+    undoButton.addEventListener('click', (event) => {
+        // Do something
+        console.log("Undo (NOT CODED YET");
+    });
+    addTwoFGButton.addEventListener('click', (event) => {
+        playerClass.totalPoints += 2;
+        totalPointsHTMLStr.innerText = playerClass.totalPoints.toString() + " PTS";
+    });
     HomePage.removeChild(dupeCard);
     GamePage.appendChild(dupeCard);
 }
@@ -95,9 +132,9 @@ class PlayerCard {
     }
     getHTMLFieldGoalAttempts() {
     }
-    getHTML3PTFieldGoalAttempts() {
+    getHTMLThreePTFieldGoalAttempts() {
     }
-    getHTML3PTFieldGoalPercentage() {
+    getHTMLThreePTFieldGoalPercentage() {
     }
     getHTMLFreeThrowAttempts() {
     }

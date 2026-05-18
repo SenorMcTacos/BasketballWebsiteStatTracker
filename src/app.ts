@@ -61,6 +61,10 @@ function initApp() {
     
 }
 
+function twoClassHTMLString(classOne : string, classTwo : string) : string {
+    return "." + classOne + "." + classTwo
+}
+
 // Create Player Cards
 function createPlayerCards(playerName : string) {
     // Clone PlayerCardTemplate
@@ -79,8 +83,48 @@ function createPlayerCards(playerName : string) {
     // Add Buttons
     let playerClass = new PlayerCard(playerName)
     
-    let totalPointsHTMLStr = ""
-    $(".")
+    // Stats to Change per Player
+    let totalPointsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalPoints")) as HTMLButtonElement
+    let fieldGoalPercentageHTMLStr = $(twoClassHTMLString(playerClass.name, "FieldGoalPercentage")) as HTMLButtonElement
+    let fieldGoalAttemptsHTMLStr = $(twoClassHTMLString(playerClass.name, "FieldAttempts")) as HTMLButtonElement
+    let threePTFieldGoalPercentageHTMLStr = $(twoClassHTMLString(playerClass.name, "ThreePTFieldGoalPercentage")) as HTMLButtonElement
+    let threePTFieldGoalAtttemptsHTMLStr = $(twoClassHTMLString(playerClass.name, "ThreePTFieldGoalAttempts")) as HTMLButtonElement
+    let freeThrowPercentageHTMLStr = $(twoClassHTMLString(playerClass.name, "FreeThrowPercentage")) as HTMLButtonElement
+    let freeThrowAttemptsHTMLStr = $(twoClassHTMLString(playerClass.name, "FreeThrowAttempts")) as HTMLButtonElement
+    let totalReboundsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalRebounds")) as HTMLButtonElement
+    let totalAssistsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalAssists")) as HTMLButtonElement
+    let totalBlocksHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalBlocks")) as HTMLButtonElement
+    let totalStealsHTMLStr = $(twoClassHTMLString(playerClass.name, "TotalSteals")) as HTMLButtonElement
+
+    // Buttons to add event listeners
+    let undoButton = $(twoClassHTMLString(playerClass.name, "UNDOButton")) as HTMLButtonElement
+    let addTwoFGButton = $(twoClassHTMLString(playerClass.name, "PlusTwoFGButton")) as HTMLButtonElement
+    let minusTwoFGButton = $(twoClassHTMLString(playerClass.name, "MinusTwoFGButton")) as HTMLButtonElement
+    let addThreeFGButton = $(twoClassHTMLString(playerClass.name, "PlusThreeFGButton")) as HTMLButtonElement
+    let minusThreeFGButton = $(twoClassHTMLString(playerClass.name, "MinusThreeFGButton")) as HTMLButtonElement
+    let addFTButton = $(twoClassHTMLString(playerClass.name, "PlusFTButton")) as HTMLButtonElement
+    let minusFTButton = $(twoClassHTMLString(playerClass.name, "MinusFTButton")) as HTMLButtonElement
+    let assistButton = $(twoClassHTMLString(playerClass.name, "ASTButton")) as HTMLButtonElement
+    let reboundButton = $(twoClassHTMLString(playerClass.name, "RBDButton")) as HTMLButtonElement
+    let stealButton = $(twoClassHTMLString(playerClass.name, "STLButton")) as HTMLButtonElement
+    let blockButton = $(twoClassHTMLString(playerClass.name, "BLKButton")) as HTMLButtonElement
+    let redoButton = $(twoClassHTMLString(playerClass.name, "REDOButton")) as HTMLButtonElement
+    // IGNORE SUB BUTTON FOR NOW!
+    // let subButton
+
+    // Add Event Listeners
+    undoButton.addEventListener('click', (event) => {
+        // Do something
+        console.log("Undo (NOT CODED YET")
+    })
+    addTwoFGButton.addEventListener('click', (event) => {
+        playerClass.totalPoints += 2
+
+
+
+        totalPointsHTMLStr.innerText = playerClass.totalPoints.toString()+ " PTS"
+    })
+
 
 
     HomePage.removeChild(dupeCard)
@@ -122,11 +166,11 @@ class PlayerCard {
 
     }
 
-    getHTML3PTFieldGoalAttempts() {
+    getHTMLThreePTFieldGoalAttempts() {
 
     }
 
-    getHTML3PTFieldGoalPercentage() {
+    getHTMLThreePTFieldGoalPercentage() {
 
     }
 
