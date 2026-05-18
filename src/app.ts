@@ -119,10 +119,43 @@ function createPlayerCards(playerName : string) {
     })
     addTwoFGButton.addEventListener('click', (event) => {
         playerClass.totalPoints += 2
-
-
+        playerClass.fieldMakes += 1
+        totalPointsHTMLStr.innerText = playerClass.totalPoints.toString()+ " PTS"
+    })
+    minusTwoFGButton.addEventListener('click', (event) => {
+        playerClass.fieldMiss += 1
+    })
+    addThreeFGButton.addEventListener('click', (event) => {
+        playerClass.totalPoints += 3
+        playerClass.fieldMakes += 1
+        playerClass.threeFieldMakes += 1
+        totalPointsHTMLStr.innerText = playerClass.totalPoints.toString()+ " PTS"
+    })
+    minusThreeFGButton.addEventListener('click', (event) => {
+        playerClass.fieldMiss += 1
+        playerClass.threeFieldMiss += 1
+    })
+    addFTButton.addEventListener('click' , (event) => {
+        playerClass.totalPoints += 1
+        playerClass.ftMakes += 1
 
         totalPointsHTMLStr.innerText = playerClass.totalPoints.toString()+ " PTS"
+    })
+    minusFTButton.addEventListener('click', (event) => {
+        playerClass.ftMiss += 1
+        
+    })
+    reboundButton.addEventListener('click', (event) => {
+        playerClass.rebounds += 1
+    })
+    assistButton.addEventListener('click', (event) => {
+        playerClass.assists += 1
+    })
+    blockButton.addEventListener('click', (event) => {
+        playerClass.blocks += 1
+    })
+    stealButton.addEventListener('click', (event) => {
+        playerClass.steals += 1
     })
 
 
